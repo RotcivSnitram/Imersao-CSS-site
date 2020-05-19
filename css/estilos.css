@@ -1,12 +1,50 @@
+/* Reseta as propriedades de imagem e tamanho do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: url('https://lh3.googleusercontent.com/wEnU1_8Pgl3FYrceECL_7AW9fNoC85j7Bxt77tYHWfFW2bzCY245jV8GxsjwOIf_VTfkaQbZstggPqGzMa96XBv2nVdyIIgs18rftRG7WLm47sJQ5qBmTOyy7cRUa-E-bctILkSFR556qT_ehYjlsDbZ9cxG7bLW1tFPnj3bHXcuMKa2pblVoEmcKoDgS4AfcWfC8oZRmwuoMoD-9_JnOgH2DwRjuGkabhJMSd1HN6dj1UJQEk2C0xOM8FYJiVDnqQgSRu6slr_NJKcOQNbh_hllLirIUAPdwD7Vfg_xaE_LFpkmtNpdnwUy5kyvu4Hjj6V54POFGC6ZKhvx_iwxYUfm5rXhUgxxFBzK1bKxlfrVOado7ZJIwgn5QaO6TBm7YO253c_KGZS4rC4ZtKPnd9uWesiPFqqGrEaj7PFDhFxDve3yTeCvMeSGyV08ozzPcUDf48Viit1cE5a3BgE67AhQf04z7s5h-EYpx3UK7lH_t_60NRJ-mwFqC2itJ_fp7bY9J5fiZf3SX_kB59tcuucAJMqMJjaxCKyxXaMD9P3J_dcXLTChGVG-thUMJ3HFZ28ausMsQRqTBOYWmaOvIfi_GMuuIoitpD50VyWXZi82AG8kXYcR7hQh8zKFdMBimazj15Dk1CoY3DICtTRn8v8NNMQoGMKF-AqtcNjmTiTfVB9uhsOy6VV7b_rd=w735-h980-no?authuser=0');
+    /*backgrouns: colocar a foto de fundo;*/
+    background-color: blanchedalmond;
     background-size: auto 100vh;
     font-family: Verdana;
     height: 100vh;
+    font-size: 10px;
+}
+
+/* Conhecido como breakpoint, se a tela tiver pelo menos 400px vai carregar esses estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 .menu {
     background-color: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
   
 .menu ul {
@@ -17,7 +55,13 @@ body {
 .menu li {
     list-style: none;
 }
-  
+
+.menu a {
+    /* background-color: aquamarine; utilizado para visualizar o espaço ocupado */
+    display: block;
+    padding: 10px 20px;
+}
+
 a {
     color: teal;
     text-decoration: none;
@@ -32,8 +76,16 @@ a:hover {
     color: black;
     text-align: center;
 }
-  
+
+.site-title {
+    font-size: 4em;
+}
+
 .site-subtitle {
     font-style: italic;
 }
-  
+
+.img-portfolio {
+    height: 50px;
+    width: 50px; 
+}
