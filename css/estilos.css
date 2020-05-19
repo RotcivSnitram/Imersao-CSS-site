@@ -53,11 +53,13 @@ header {
 }
   
 .menu li {
+    /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
+    font-family: 'PT Serif', serif;
     list-style: none;
 }
 
 .menu a {
-    /* background-color: aquamarine; utilizado para visualizar o espaço ocupado */
+    /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
     display: block;
     padding: 10px 20px;
 }
@@ -79,13 +81,73 @@ a:hover {
 
 .site-title {
     font-size: 4em;
+    font-family: 'Bitter', serif;
 }
 
 .site-subtitle {
     font-style: italic;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.8em;
 }
 
-.img-portfolio {
-    height: 50px;
-    width: 50px; 
+.projeto {
+    padding: 2em;
+    height: 100vh;
+}
+
+.projeto h2 {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 1.5em;
+}
+
+.projeto .grid {
+    display: grid;
+    gap: 1em;;
+}
+
+@media (min-width: 560px) {
+    .projeto .grid {
+        align-content: center;
+        grid-template-columns: repeat(2, 260px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 880px) {
+    .projeto .grid {
+        align-content: center;
+        grid-template-columns: repeat(3, 260px);
+        height: calc(100vh - 8em - 48px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1080px) {
+    .projeto .grid {
+        grid-template-columns: repeat(4, 260px);
+    }
+}
+
+.projeto figure {
+    text-align: center;
+}
+
+.img-projeto {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+@media (min-width: 1200px) {
+    .img-projeto {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }    
+}
+
+.caption-projeto {
+    font-family: 'Indie Flower';
 }
