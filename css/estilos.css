@@ -45,6 +45,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
 }
   
 .menu ul {
@@ -54,7 +55,7 @@ header {
   
 .menu li {
     /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
-    font-family: 'PT Serif', serif;
+    font-family: 'Indie Flower', cursive;
     list-style: none;
 }
 
@@ -62,6 +63,12 @@ header {
     /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
     display: block;
     padding: 10px 20px;
+    transition: 2s;
+}
+
+.menu a:hover {
+    background-color: blanchedalmond;
+    color: black;
 }
 
 a {
@@ -72,7 +79,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
-  
+
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease-in-out 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;    
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;    
+    }
+}
+
 .site-subtitle,
 .site-title {
     color: black;
@@ -90,15 +114,48 @@ a:hover {
     line-height: 1.8em;
 }
 
+.sobre,
+.contato,
 .projeto {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
+
 }
 
+@media (min-width: 1200px) {
+    .container {
+       max-width: 1200px;
+       margin-left: auto;
+       margin-right: auto;
+    }   
+}
+
+.sobre h2,
+.contato h2,
 .projeto h2 {
     color: black;
     font-family: 'Indie Flower', cursive;
     margin-bottom: 1.5em;
+}
+
+.sobre p {
+    color: black;
+    font-family: 'Bitter', serif;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.sobre figure {
+    text-align: center;
+}
+
+.img-sobre {
+    height: auto;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10%;
+    text-align: center;
 }
 
 .projeto .grid {
@@ -138,6 +195,12 @@ a:hover {
     width: 200px;
     object-fit: cover;
     border-radius: 10%;
+    transition: transform 500ms;
+    text-align: center;
+}
+
+.img-projeto:hover {
+    transform: scale(1.2) rotate(-2deg);
 }
 
 @media (min-width: 1200px) {
@@ -150,4 +213,20 @@ a:hover {
 
 .caption-projeto {
     font-family: 'Indie Flower';
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: black;
+    font-size: 4em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }

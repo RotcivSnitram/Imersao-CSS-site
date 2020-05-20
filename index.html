@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Martins</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Indie+Flower&family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Martins</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Indie+Flower&family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/21a609ba75.js" crossorigin="anonymous"></script>
 </head >
+
 <body>
+
   <header>
+
       <nav class="menu">
-        <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
+        <ul class="container">
+          <li><a href="https://rotcivsnitram.github.io/imersaocss/"><i class="fas fa-home"></i></a></li>
+          <li><a href="#sobre">Sobre</a></li> 
+          <li><a href="#projeto">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>       
         </ul>
       </nav>
-      <div>
+
+      <div class="titulo">
         <h1 class="site-title">Victor Martins</h1>
-        <h2 class="site-subtitle">Proto Physicist</h2>
+        <h2 class="site-subtitle">Protótipo de Físico</h2>
       </div>
-   </header>
-    <section class='projeto'>
+
+  </header>
+
+    <section class="sobre container" id="sobre">
+      <h2>Sobre</h2>
+      <figure>
+        <img class="img-sobre" src="./img/eu-creditos-victor-martins.jpg" alt="Sobre">
+      </figure>
+
+      <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis minima, rem repudiandae aliquam inventore sit ad soluta nostrum odio saepe temporibus nam cum ut exercitationem incidunt perspiciatis doloremque nulla quis.
+      </p>
+      <p>
+      Cum amet delectus ullam cumque itaque quis recusandae, sequi vitae quam autem aspernatur iure blanditiis adipisci soluta quia voluptatibus consequuntur! Placeat ad a libero? Culpa itaque natus sit cupiditate nihil.
+      </p>
+      <p>
+      Sunt inventore cumque nostrum error ad, accusantium aliquam consequuntur qui quod laborum animi. Eius, soluta voluptatum in vero odio, tenetur qui fugiat rem deleniti quia, ipsam non dolor? Doloremque, nemo.
+      </p>
+      <p>
+      Quas, accusamus impedit. Nisi facilis recusandae eveniet unde maiores soluta adipisci in esse corporis reiciendis consequatur tempora aut ullam repellendus fugiat, assumenda commodi aliquid labore modi, dolorem ab eaque nulla. 
+      </p>
+
+      <div class="texto">
+
+      </div>
+    </section>
+
+    <section class="projeto container" id="projeto">
       <h2>Projetos</h2>
+
       <div class="grid">
         <figure>
           <img class="img-projeto" src="./img/coelho-creditos-victor-martins.jpg" alt="Formação">
@@ -49,6 +82,29 @@
           <figcaption class='caption-projeto'>Curiosidades</figcaption>
         </figure>
       </div>
+
     </section>
+
+    <section class="contato container" id="contato">
+      <h2>Contato</h2>
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/RotcivSnitram">
+          <i class="fab fa-github-square"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/rotciv_snitram/">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/RotcivSnitram">
+          <i class="fab fa-twitter-square"></i>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/victor-martins-rs/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="victormartins.souza@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </section>
+
 </body>
 </html>
