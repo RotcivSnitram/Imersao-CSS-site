@@ -63,7 +63,7 @@ header {
     /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
     display: block;
     padding: 10px 20px;
-    transition: 2s;
+    transition: 1s;
 }
 
 .menu a:hover {
@@ -72,7 +72,7 @@ header {
 }
 
 a {
-    color: teal;
+    color: blanchedalmond;
     text-decoration: none;
 }
   
@@ -146,15 +146,35 @@ a:hover {
     text-indent: 2em;
 }
 
-.sobre figure {
+.sobre a {
+    color: black;
+    text-decoration: underline;
+}
+
+.sobre a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+
+.sobre .avatar {
+    margin-left: 2em;
     text-align: center;
 }
 
-.img-sobre {
+@media (min-width: 600px) {
+    .sobre .avatar {
+        float: right;
+        margin-left: 2em;
+    }    
+}
+
+.sobre .avatar img {
     height: auto;
     width: 300px;
     object-fit: cover;
     border-radius: 10%;
+    /*clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
     text-align: center;
 }
 
@@ -221,7 +241,7 @@ a:hover {
 
 .contato a {
     color: black;
-    font-size: 4em;
+    font-size: 2.5em;
     transition: text-shadow 1s;
 }
 
