@@ -1,0 +1,252 @@
+/* Reseta as propriedades de imagem e tamanho do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*backgrouns: colocar a foto de fundo;*/
+    background-color: blanchedalmond;
+    background-size: auto 100vh;
+    font-family: Verdana;
+    height: 100vh;
+    font-size: 10px;
+}
+
+/* Conhecido como breakpoint, se a tela tiver pelo menos 400px vai carregar esses estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.menu {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+  
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.menu li {
+    /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
+    font-family: 'Indie Flower', cursive;
+    list-style: none;
+}
+
+.menu a {
+    /* background-color: aquamarine; */ /* Utilizado para visualizar o espaço ocupado */
+    display: block;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+.menu a:hover {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+a {
+    color: blanchedalmond;
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease-in-out 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;    
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;    
+    }
+}
+
+.site-subtitle,
+.site-title {
+    color: black;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 4em;
+    font-family: 'Bitter', serif;
+}
+
+.site-subtitle {
+    font-style: italic;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.8em;
+}
+
+.sobre,
+.contato,
+.projeto {
+    padding: 2em;
+    min-height: 100vh;
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+       max-width: 1200px;
+       margin-left: auto;
+       margin-right: auto;
+    }   
+}
+
+.sobre h2,
+.contato h2,
+.projeto h2 {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 1.5em;
+}
+
+.sobre p {
+    color: black;
+    font-family: 'Bitter', serif;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.sobre a {
+    color: black;
+    text-decoration: underline;
+}
+
+.sobre a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+
+.sobre .avatar {
+    margin-left: 2em;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .sobre .avatar {
+        float: right;
+        margin-left: 2em;
+    }    
+}
+
+.sobre .avatar img {
+    height: auto;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10%;
+    /*clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
+    text-align: center;
+}
+
+.projeto .grid {
+    display: grid;
+    gap: 1em;;
+}
+
+@media (min-width: 560px) {
+    .projeto .grid {
+        align-content: center;
+        grid-template-columns: repeat(2, 260px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 880px) {
+    .projeto .grid {
+        align-content: center;
+        grid-template-columns: repeat(3, 260px);
+        height: calc(100vh - 8em - 48px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1080px) {
+    .projeto .grid {
+        grid-template-columns: repeat(4, 260px);
+    }
+}
+
+.projeto figure {
+    text-align: center;
+}
+
+.img-projeto {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: transform 500ms;
+    text-align: center;
+}
+
+.img-projeto:hover {
+    transform: scale(1.2) rotate(-2deg);
+}
+
+@media (min-width: 1200px) {
+    .img-projeto {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }    
+}
+
+.caption-projeto {
+    font-family: 'Indie Flower';
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: black;
+    font-size: 2.5em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
